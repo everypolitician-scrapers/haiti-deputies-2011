@@ -8,8 +8,9 @@ require 'open-uri'
 require 'colorize'
 
 require 'pry'
-require 'open-uri/cached'
-OpenURI::Cache.cache_path = '.cache'
+# require 'open-uri/cached'
+# OpenURI::Cache.cache_path = '.cache'
+require 'scraped_page_archive/open-uri'
 
 class String
   def tidy
