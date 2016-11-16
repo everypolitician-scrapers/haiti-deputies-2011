@@ -55,4 +55,4 @@ def scrape_list(url)
   end
 end
 
-scrape_list('http://www.haiti-reference.com/politique/legislatif/49eme_legis.php')
+scrape_list('https://www.haiti-reference.com/politique/legislatif/49eme_legis.php')
