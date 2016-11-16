@@ -1,0 +1,31 @@
+---
+request:
+  method: get
+  uri: https://www.haiti-reference.com/politique/legislatif/49eme_legis.php
+  body:
+    encoding: US-ASCII
+    string: ''
+  headers:
+    Accept-Encoding:
+    - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+    Accept:
+    - '*/*'
+    User-Agent:
+    - Ruby
+response:
+  status:
+    code: 200
+    message: OK
+  headers:
+    Date:
+    - Wed, 16 Nov 2016 17:27:43 GMT
+    Server:
+    - Apache
+    Content-Length:
+    - '129'
+    Content-Type:
+    - text/html
+  body:
+    encoding: UTF-8
+  http_version: 
+recorded_at: Wed, 16 Nov 2016 17:27:43 GMT
