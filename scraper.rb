@@ -8,8 +8,9 @@ require 'open-uri'
 require 'colorize'
 
 require 'pry'
-require 'open-uri/cached'
-OpenURI::Cache.cache_path = '.cache'
+# require 'open-uri/cached'
+# OpenURI::Cache.cache_path = '.cache'
+require 'scraped_page_archive/open-uri'
 
 class String
   def tidy
@@ -55,4 +56,4 @@ def scrape_list(url)
   end
 end
 
-scrape_list('http://www.haiti-reference.com/politique/legislatif/49eme_legis.php')
+scrape_list('https://www.haiti-reference.com/politique/legislatif/49eme_legis.php')
