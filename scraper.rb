@@ -48,4 +48,5 @@ def scrape_list(url)
   end
 end
 
+ScraperWiki.sqliteexecute('DELETE FROM data') rescue nil
 scrape_list('https://www.haiti-reference.com/politique/legislatif/49eme_legis.php')
