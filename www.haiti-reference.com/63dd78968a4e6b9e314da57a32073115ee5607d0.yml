@@ -18,13 +18,13 @@ response:
     message: OK
   headers:
     Date:
-    - Thu, 02 Feb 2017 23:34:16 GMT
+    - Fri, 03 Feb 2017 02:54:09 GMT
     Server:
     - Apache
     Cache-Control:
     - max-age=604800, must-revalidate
     Expires:
-    - Thu, 09 Feb 2017 23:34:16 GMT
+    - Fri, 10 Feb 2017 02:54:09 GMT
     Content-Length:
     - '129'
     Content-Type:
@@ -32,4 +32,4 @@ response:
   body:
     encoding: UTF-8
   http_version: 
-recorded_at: Thu, 02 Feb 2017 23:34:16 GMT
+recorded_at: Fri, 03 Feb 2017 02:54:10 GMT
