@@ -32,7 +32,7 @@ def scrape_list(url)
       }
       area[:district] = 'Saint Marc' if area[:district] == 'St. Marc'
       area[:id] = 'ocd-division/country:ht/departement:%s/arrondissement:%s/circonscription:%s' %
-                  %i(departement district circ_id).map { |i| area[i].downcase.tr(' ', '_') }
+                  %i[departement district circ_id].map { |i| area[i].downcase.tr(' ', '_') }
 
       data = {
         name:    tds[0].text.tidy.sub('Siège vacant dû au décès de ', ''),
@@ -43,7 +43,7 @@ def scrape_list(url)
         term:    '2011',
         source:  url,
       }
-      ScraperWiki.save_sqlite(%i(name area_id), data)
+      ScraperWiki.save_sqlite(%i[name area_id], data)
     end
   end
 end
