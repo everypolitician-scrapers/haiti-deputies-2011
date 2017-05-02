@@ -17,12 +17,12 @@ end
 def scrape_list(url)
   noko = noko_for(url)
 
-  noko.xpath('//p[@class="pagetitle" and contains(.,"PARTEMENT")]').each do |dep|
-    dep.xpath('following-sibling::table[1]/tr').drop(1).each do |tr|
+  noko.xpath('//h4[contains(.,"PARTEMENT")]').each do |dep|
+    dep.xpath('following-sibling::table[1]//tr').drop(1).each do |tr|
       tds = tr.css('td')
 
-      circ = tds[1].text.tidy.sub('unique circ', '1è circ').sub('circ. unique', '1è circ')
-      (cap = circ.match(/(.*):\s*(\d+)è\.?\s*circ\.?\s*(.*)/)) || raise("Can't parse area: #{tds[1].text}")
+      circ = tds[1].text.tidy.sub('unique circ', '1è circ').sub('circ. unique', '1è circ').sub('1ère circ.', '1è circ')
+      cap = circ.match(/(.*):\s*(\d+)è\.?\s*circ\.?\s*(.*)/) or binding.pry
 
       area = {
         departement: dep.text.tidy.sub('DÉPARTEMENT ', '').sub(/^(du|de l.)\s*/, ''),
@@ -50,4 +50,4 @@ def scrape_list(url)
 end
 
 ScraperWiki.sqliteexecute('DROP TABLE data') rescue nil
-scrape_list('https://www.haiti-reference.com/politique/legislatif/49eme_legis.php')
+scrape_list('https://www.haiti-reference.com/pages/plan/politique/pouvoir-legislatif/49eme-legislature/')
