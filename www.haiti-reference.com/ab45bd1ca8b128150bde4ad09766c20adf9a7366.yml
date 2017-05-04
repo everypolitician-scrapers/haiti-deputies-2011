@@ -18,7 +18,7 @@ response:
     message: OK
   headers:
     Date:
-    - Wed, 03 May 2017 05:31:19 GMT
+    - Thu, 04 May 2017 21:22:16 GMT
     Server:
     - Apache
     Link:
@@ -31,4 +31,4 @@ response:
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Wed, 03 May 2017 05:31:23 GMT
+recorded_at: Thu, 04 May 2017 21:22:19 GMT
