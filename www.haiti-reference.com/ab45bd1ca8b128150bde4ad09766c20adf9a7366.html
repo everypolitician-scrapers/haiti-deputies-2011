@@ -242,6 +242,127 @@ var slider_speed = {"vars":"6000"};
 <link rel='shortlink' href='https://www.haiti-reference.com/pages/?p=1898' />
 <link rel="alternate" type="application/json+oembed" href="https://www.haiti-reference.com/pages/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.haiti-reference.com%2Fpages%2Fplan%2Fpolitique%2Fpouvoir-legislatif%2F49eme-legislature%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://www.haiti-reference.com/pages/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.haiti-reference.com%2Fpages%2Fplan%2Fpolitique%2Fpouvoir-legislatif%2F49eme-legislature%2F&#038;format=xml" />
+<script id="wpcp_disable_selection" type="text/javascript">
+//<![CDATA[
+var image_save_msg='You Can Not Save images!';
+	var no_menu_msg='Context Menu disabled!';
+	var smessage = "Content is protected !!";
+
+function disableEnterKey(e)
+{
+	if (e.ctrlKey){
+     var key;
+     if(window.event)
+          key = window.event.keyCode;     //IE
+     else
+          key = e.which;     //firefox (97)
+    //if (key != 17) alert(key);
+     if (key == 97 || key == 65 || key == 67 || key == 99 || key == 88 || key == 120 || key == 26 || key == 85  || key == 86 || key == 83 || key == 43)
+     {
+          show_wpcp_message('You are not allowed to copy content or view source');
+          return false;
+     }else
+     	return true;
+     }
+}
+
+function disable_copy(e)
+{	
+	var elemtype = e.target.nodeName;
+	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+	elemtype = elemtype.toUpperCase();
+	var checker_IMG = '';
+	if (elemtype == "IMG" && checker_IMG == 'checked' && e.detail >= 2) {show_wpcp_message(alertMsg_IMG);return false;}
+	if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
+	{
+		if (smessage !== "" && e.detail == 2)
+			show_wpcp_message(smessage);
+		
+		if (isSafari)
+			return true;
+		else
+			return false;
+	}	
+}
+function disable_copy_ie()
+{
+	var elemtype = window.event.srcElement.nodeName;
+	elemtype = elemtype.toUpperCase();
+	if (elemtype == "IMG") {show_wpcp_message(alertMsg_IMG);return false;}
+	if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
+	{
+		//alert(navigator.userAgent.indexOf('MSIE'));
+			//if (smessage !== "") show_wpcp_message(smessage);
+		return false;
+	}
+}	
+function reEnable()
+{
+	return true;
+}
+document.onkeydown = disableEnterKey;
+document.onselectstart = disable_copy_ie;
+if(navigator.userAgent.indexOf('MSIE')==-1)
+{
+	document.onmousedown = disable_copy;
+	document.onclick = reEnable;
+}
+function disableSelection(target)
+{
+    //For IE This code will work
+    if (typeof target.onselectstart!="undefined")
+    target.onselectstart = disable_copy_ie;
+    
+    //For Firefox This code will work
+    else if (typeof target.style.MozUserSelect!="undefined")
+    {target.style.MozUserSelect="none";}
+    
+    //All other  (ie: Opera) This code will work
+    else
+    target.onmousedown=function(){return false}
+    target.style.cursor = "default";
+}
+//Calling the JS function directly just after body load
+window.onload = function(){disableSelection(document.body);};
+//]]>
+</script>
+	<script id="wpcp_disable_Right_Click" type="text/javascript">
+	//<![CDATA[
+	document.ondragstart = function() { return false;}
+	/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Disable context menu on images by GreenLava Version 1.0
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+	    function nocontext(e) {
+	       return false;
+	    }
+	    document.oncontextmenu = nocontext;
+	//]]>
+	</script>
+<style>
+.unselectable
+{
+-moz-user-select:none;
+-webkit-user-select:none;
+cursor: default;
+}
+html
+{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+</style>
+<script id="wpcp_css_disable_selection" type="text/javascript">
+var e = document.getElementsByTagName('body')[0];
+if(e)
+{
+	e.setAttribute('unselectable',on);
+}
+</script>
 <style type='text/css'>img#wpstats{display:none}</style>	<style id="color-settings">
 			.btn-info, .btn-default, .main-navigation li:hover > a, .main-navigation ul ul a, .main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .navbar-toggle .icon-bar, .main-navigation .current_page_ancestor > a, #copyright, #respond #submit, .post-content form input[type=submit], .post-content form input[type=button], .widget-title h4, .pagination .fa, #footer .widget_calendar thead tr, .site-info, footer .widget_calendar thead tr{
 			background-color:#992d00;
@@ -350,7 +471,7 @@ padding-left: 10px;
 <script src="/wimpy/wimpy.js"></script>
 <script src='/google_analytics_auto.js'></script></head>
 
-<body data-rsssl=1 class="page-template-default page page-id-1898 page-child parent-pageid-1862 wpbdp-with-button-styles">
+<body data-rsssl=1 class="page-template-default page page-id-1898 page-child parent-pageid-1862 unselectable wpbdp-with-button-styles">
 
 
 <div id="page" class="hfeed site">
@@ -1386,7 +1507,7 @@ Port à Piment</td>
 	<div>Préval: Obstèques</div>
 	</div>
 </div><div style="clear:both"></div>
-<!-- WPPA+ thumbnail Widget end --></aside><aside id="evcalwidget_sc-4" class="widget EvcalWidget_SC"><div class="widget-title"><h4>Sur le Calendrier</h4><div class="arrow-right"></div></div><div id='evcal_widget' class='evo_widget'><div id='evcal_calendar_171' class='ajde_evcal_calendar  ul' ><div class='evo-data' data-cyear="2017" data-cmonth="5" data-runajax="1" data-evc_open="0" data-cal_ver="2.5.3" data-mapscroll="true" data-mapformat="terrain" data-mapzoom="16" data-mapiconurl="" data-ev_cnt="3" data-show_limit="yes" data-tiles="no" data-sort_by="sort_date" data-filters_on="false" data-range_start="0" data-range_end="0" data-send_unix="0" data-ux_val="4" data-accord="0" data-rtl="no"  ></div><div id='evcal_head' class='calendar_header evcal_nosort' ><div class='evo_cal_above'><span class='evo-gototoday-btn' style='display:none' data-mo='5' data-yr='2017' data-dy=''>Aujourd&#039;hui</span></div><div class='evo_cal_above_content'></div><div class='cal_arguments' style='display:none' data-hide_past="yes" data-show_et_ft_img="no" data-event_order="ASC" data-ft_event_priority="no" data-lang="L1" data-month_incre="0" data-only_ft="no" data-evc_open="no" data-show_limit="yes" data-etc_override="yes" data-show_limit_redir="https://www.haiti-reference.com/pages/plan/generalites/calendrier-dhaiti/" data-tiles="no" data-tile_height="0" data-tile_bg="0" data-tile_count="2" data-tile_style="0" data-s="" data-members_only="no" data-ux_val="4" ></div><div class='clear'></div></div><div class='evcal_month_line'><p>Mai 2017</p></div><div id='evcal_list' class='eventon_events_list '><div id="event_13873" class="eventon_list_event  event" data-event_id="13873" data-time="1473897900-1504137900" data-colr="#f4fafa" itemscope itemtype='http://schema.org/Event' 1><div class="evo_event_schema" style="display:none" ><a itemprop='url'  href='https://www.haiti-reference.com/pages/events/montreal-haiti-les-yeux-du-ciel/'></a><span itemprop='name'  >[Montréal] Haiti: Les yeux du ciel: Photographie de Daniel Desmarais</span><img itemprop='image'  src=''></img><meta itemprop='startDate' content='2016-9-15' ></meta><meta itemprop='endDate' content='2017-8-31' ></meta><meta itemprop='eventStatus' content='on-schedule' ></meta>
+<!-- WPPA+ thumbnail Widget end --></aside><aside id="evcalwidget_sc-4" class="widget EvcalWidget_SC"><div class="widget-title"><h4>Sur le Calendrier</h4><div class="arrow-right"></div></div><div id='evcal_widget' class='evo_widget'><div id='evcal_calendar_729' class='ajde_evcal_calendar  ul' ><div class='evo-data' data-cyear="2017" data-cmonth="5" data-runajax="1" data-evc_open="0" data-cal_ver="2.5.3" data-mapscroll="true" data-mapformat="terrain" data-mapzoom="16" data-mapiconurl="" data-ev_cnt="3" data-show_limit="yes" data-tiles="no" data-sort_by="sort_date" data-filters_on="false" data-range_start="0" data-range_end="0" data-send_unix="0" data-ux_val="4" data-accord="0" data-rtl="no"  ></div><div id='evcal_head' class='calendar_header evcal_nosort' ><div class='evo_cal_above'><span class='evo-gototoday-btn' style='display:none' data-mo='5' data-yr='2017' data-dy=''>Aujourd&#039;hui</span></div><div class='evo_cal_above_content'></div><div class='cal_arguments' style='display:none' data-hide_past="yes" data-show_et_ft_img="no" data-event_order="ASC" data-ft_event_priority="no" data-lang="L1" data-month_incre="0" data-only_ft="no" data-evc_open="no" data-show_limit="yes" data-etc_override="yes" data-show_limit_redir="https://www.haiti-reference.com/pages/plan/generalites/calendrier-dhaiti/" data-tiles="no" data-tile_height="0" data-tile_bg="0" data-tile_count="2" data-tile_style="0" data-s="" data-members_only="no" data-ux_val="4" ></div><div class='clear'></div></div><div class='evcal_month_line'><p>Mai 2017</p></div><div id='evcal_list' class='eventon_events_list '><div id="event_13873" class="eventon_list_event  event" data-event_id="13873" data-time="1473897900-1504137900" data-colr="#f4fafa" itemscope itemtype='http://schema.org/Event' 1><div class="evo_event_schema" style="display:none" ><a itemprop='url'  href='https://www.haiti-reference.com/pages/events/montreal-haiti-les-yeux-du-ciel/'></a><span itemprop='name'  >[Montréal] Haiti: Les yeux du ciel: Photographie de Daniel Desmarais</span><img itemprop='image'  src=''></img><meta itemprop='startDate' content='2016-9-15' ></meta><meta itemprop='endDate' content='2017-8-31' ></meta><meta itemprop='eventStatus' content='on-schedule' ></meta>
 									<item style="display:none" itemprop="location" itemscope itemtype="http://schema.org/Place">
 										<span itemprop="name">TOHU</span>
 										<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -1416,7 +1537,7 @@ Port à Piment</td>
 										<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 											<item itemprop="streetAddress">Nostrand Ave between Empire Blvd and Glenwood Rd<br>Brooklyn NY</item>
 										</span></item></div>
-				<p class="desc_trig_outter"><a data-gmtrig="1" data-exlk="0" style="border-color: #ffffff;" id="evc_149596920017467" class="desc_trig sin_val evcal_list_a" data-ux_val="4" ><span class='evcal_cblock ' data-bgcolor='#ffffff' data-smon='Mai' data-syr='2017'><em class='evo_date' ><span class="start">28<em>mai</em></span></em><em class='evo_time' ><span class='start'>11:00</span><span class='end'>- 18:00</span></em><em class='clear'></em></span><span class='evcal_desc evo_info hide_eventtopdata ' data-latlng="40.6658448,-73.9511287"  data-location_address="Nostrand Ave between Empire Blvd and Glenwood Rd<br>Brooklyn NY" data-location_type="lonlat" data-location_name="Brooklyn NY" data-location_status="true" ><span class='evo_above_title'></span><span class='evcal_desc2 evcal_event_title' itemprop='name'>[Brooklyn, NY] Haitian Flag Day Brooklyn NYC: Parade</span><span class='evo_below_title'></span><span class='evcal_desc_info' ><em class="evcal_location" data-latlng="40.6658448,-73.9511287"  data-add_str=""><em class="event_location_name">Brooklyn NY</em></em></span><span class='evcal_desc3'></span></span><em class='clear'></em></p></a><div class='clear end'></div></div><div class="evoShow_more_events" style="" data-dir="https://www.haiti-reference.com/pages/plan/generalites/calendrier-dhaiti/">Autres activités du mois</div></div><div class='clear'></div></div><!-- ajde_evcal_calendar--></div></aside><aside id="wpbdp_randomlistingswidget-2" class="widget widget_wpbdp_randomlistingswidget"><div class="widget-title"><h4>Écoles secondaires privées</h4><div class="arrow-right"></div></div><ul class="wpbdp-listings-widget-list"><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2099/college-saint-paul">Collège Saint Paul</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2155/college-de-la-1ere-eglise-baptiste-des-cayes">College de la 1ère Eglise Baptiste des Cayes</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2187/institution-secondaire-gerard-gourgue">Institution Secondaire Gérard Gourgue</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2100/college-sainte-croix">Collège Sainte Croix</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2107/college-saint-francois-xavier-2">Collège Saint François Xavier</a></li></ul></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<div class="widget-title"><h4>Notre Blog: Textes récents</h4><div class="arrow-right"></div></div>		<ul>
+				<p class="desc_trig_outter"><a data-gmtrig="1" data-exlk="0" style="border-color: #ffffff;" id="evc_149596920017467" class="desc_trig sin_val evcal_list_a" data-ux_val="4" ><span class='evcal_cblock ' data-bgcolor='#ffffff' data-smon='Mai' data-syr='2017'><em class='evo_date' ><span class="start">28<em>mai</em></span></em><em class='evo_time' ><span class='start'>11:00</span><span class='end'>- 18:00</span></em><em class='clear'></em></span><span class='evcal_desc evo_info hide_eventtopdata ' data-latlng="40.6658448,-73.9511287"  data-location_address="Nostrand Ave between Empire Blvd and Glenwood Rd<br>Brooklyn NY" data-location_type="lonlat" data-location_name="Brooklyn NY" data-location_status="true" ><span class='evo_above_title'></span><span class='evcal_desc2 evcal_event_title' itemprop='name'>[Brooklyn, NY] Haitian Flag Day Brooklyn NYC: Parade</span><span class='evo_below_title'></span><span class='evcal_desc_info' ><em class="evcal_location" data-latlng="40.6658448,-73.9511287"  data-add_str=""><em class="event_location_name">Brooklyn NY</em></em></span><span class='evcal_desc3'></span></span><em class='clear'></em></p></a><div class='clear end'></div></div><div class="evoShow_more_events" style="" data-dir="https://www.haiti-reference.com/pages/plan/generalites/calendrier-dhaiti/">Autres activités du mois</div></div><div class='clear'></div></div><!-- ajde_evcal_calendar--></div></aside><aside id="wpbdp_randomlistingswidget-2" class="widget widget_wpbdp_randomlistingswidget"><div class="widget-title"><h4>Écoles secondaires privées</h4><div class="arrow-right"></div></div><ul class="wpbdp-listings-widget-list"><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2186/institution-sainte-rose-de-lima">Institution Sainte Rose de Lima</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2166/college-notre-dame-du-sacre-coeur">Collège Notre Dame du Sacré-Cœur</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2054/college-jean-xxiii">Collège Jean XXIII</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2160/college-canado-haitien">Collège Canado-Haitien</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2173/college-bethanie">Collège Bethanie</a></li></ul></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<div class="widget-title"><h4>Notre Blog: Textes récents</h4><div class="arrow-right"></div></div>		<ul>
 					<li>
 				<a href="https://www.haiti-reference.com/pages/2017/05/05/miracle/">Haïti a besoin d’un miracle</a>
 						</li>
@@ -1517,7 +1638,78 @@ Boston, MA 02136-5216 (U.S.A.)<br>
 		var gmapstyles = 'default';
 		/* ]]> */
 		</script>		
-		
+			<div id="wpcp-error-message" class="msgmsg-box-wpcp warning-wpcp hideme"><span>error: </span>Content is protected !!</div>
+	<script>
+	var timeout_result;
+	function show_wpcp_message(smessage)
+	{
+		if (smessage !== "")
+			{
+			var smessage_text = '<span>Alert: </span>'+smessage;
+			document.getElementById("wpcp-error-message").innerHTML = smessage_text;
+			document.getElementById("wpcp-error-message").className = "msgmsg-box-wpcp warning-wpcp showme";
+			clearTimeout(timeout_result);
+			timeout_result = setTimeout(hide_message, 3000);
+			}
+	}
+	function hide_message()
+	{
+		document.getElementById("wpcp-error-message").className = "msgmsg-box-wpcp warning-wpcp hideme";
+	}
+	</script>
+	<style type="text/css">
+	#wpcp-error-message {
+	    direction: ltr;
+	    text-align: center;
+	    transition: opacity 900ms ease 0s;
+	    z-index: 99999999;
+	}
+	.hideme {
+    	opacity:0;
+    	visibility: hidden;
+	}
+	.showme {
+    	opacity:1;
+    	visibility: visible;
+	}
+	.msgmsg-box-wpcp {
+		border-radius: 10px;
+		color: #555;
+		font-family: Tahoma;
+		font-size: 11px;
+		margin: 10px;
+		padding: 10px 36px;
+		position: fixed;
+		width: 255px;
+		top: 50%;
+  		left: 50%;
+  		margin-top: -10px;
+  		margin-left: -130px;
+  		-webkit-box-shadow: 0px 0px 34px 2px rgba(242,191,191,1);
+		-moz-box-shadow: 0px 0px 34px 2px rgba(242,191,191,1);
+		box-shadow: 0px 0px 34px 2px rgba(242,191,191,1);
+	}
+	.msgmsg-box-wpcp span {
+		font-weight:bold;
+		text-transform:uppercase;
+	}
+	.error-wpcp {		background:#ffecec url('https://www.haiti-reference.com/pages/wp-content/plugins/wp-content-copy-protector/images/error.png') no-repeat 10px 50%;
+		border:1px solid #f5aca6;
+	}
+	.success {
+		background:#e9ffd9 url('https://www.haiti-reference.com/pages/wp-content/plugins/wp-content-copy-protector/images/success.png') no-repeat 10px 50%;
+		border:1px solid #a6ca8a;
+	}
+	.warning-wpcp {
+		background:#ffecec url('https://www.haiti-reference.com/pages/wp-content/plugins/wp-content-copy-protector/images/warning.png') no-repeat 10px 50%;
+		border:1px solid #f5aca6;
+	}
+	.notice {
+		background:#e3f7fc url('https://www.haiti-reference.com/pages/wp-content/plugins/wp-content-copy-protector/images/notice.png') no-repeat 10px 50%;
+		border:1px solid #8ed9f6;
+	}
+    </style>
+
 		<!-- start WPPA+ Footer data -->
 		<div id="wppa-overlay-bg" style="text-align:center;display:none;position:fixed;top:0;left:0;z-index:100090;width:100%;height:2048px;background-color:black;" onclick="wppaOvlOnclick(event)" ><div id="wppa-ovl-legenda-1" onmouseover="jQuery(this).css('visibility','visible');" onmouseout="jQuery(this).css('visibility','hidden');" style="position:absolute;left:0;top:0;background-color:black;color:#a7a7a7;visibility:visible;" >
 					Appuyez sur f pour le plein écran.
@@ -1553,7 +1745,7 @@ Boston, MA 02136-5216 (U.S.A.)<br>
 	</script>
 <!-- end WPPA+ Footer data -->
 
-<!-- Nonce for various wppa actions --><input type="hidden" id="wppa-nonce" name="wppa-nonce" value="5a4cc33dc1" /><input type="hidden" id="wppa-qr-nonce" name="wppa-qr-nonce" value="ae4db66311" />
+<!-- Nonce for various wppa actions --><input type="hidden" id="wppa-nonce" name="wppa-nonce" value="a8bec443e7" /><input type="hidden" id="wppa-qr-nonce" name="wppa-qr-nonce" value="ad8e701b5f" />
 <!-- Do user upload -->
 <!-- Done user upload -->	<div style="display:none">
 	</div>
@@ -1583,7 +1775,7 @@ var WPGroHo = {"my_hash":""};
 <script type='text/javascript' src='//www.haiti-reference.com/pages/wp-content/plugins/eventON/assets/js/jquery.mousewheel.min.js?ver=2.5.3'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var the_ajax_script = {"ajaxurl":"https:\/\/www.haiti-reference.com\/pages\/wp-admin\/admin-ajax.php","postnonce":"40bb0a8e15"};
+var the_ajax_script = {"ajaxurl":"https:\/\/www.haiti-reference.com\/pages\/wp-admin\/admin-ajax.php","postnonce":"86fdbe956c"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='//www.haiti-reference.com/pages/wp-content/plugins/eventON/assets/js/eventon_script.js?ver=2.5.3'></script>
