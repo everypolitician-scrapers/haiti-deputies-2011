@@ -18,16 +18,12 @@ response:
     message: OK
   headers:
     Date:
-    - Tue, 29 Aug 2017 12:54:29 GMT
+    - Wed, 30 Aug 2017 20:53:08 GMT
     Server:
     - Apache
     Link:
     - <https://www.haiti-reference.com/pages/wp-json/>; rel="https://api.w.org/",
       <https://www.haiti-reference.com/pages/?p=1898>; rel=shortlink
-    Expires:
-    - Wed, 11 Jan 1984 05:00:00 GMT
-    Cache-Control:
-    - no-cache, must-revalidate, max-age=0
     Transfer-Encoding:
     - chunked
     Content-Type:
@@ -35,4 +31,4 @@ response:
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Tue, 29 Aug 2017 12:54:31 GMT
+recorded_at: Wed, 30 Aug 2017 20:53:11 GMT
