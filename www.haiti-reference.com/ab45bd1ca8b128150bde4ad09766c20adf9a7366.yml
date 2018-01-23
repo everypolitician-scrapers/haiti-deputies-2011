@@ -20,7 +20,7 @@ response:
     Server:
     - nginx/1.12.2
     Date:
-    - Tue, 23 Jan 2018 02:40:54 GMT
+    - Tue, 23 Jan 2018 23:02:00 GMT
     Content-Type:
     - text/html; charset=UTF-8
     Connection:
@@ -29,8 +29,8 @@ response:
     - <https://www.haiti-reference.com/pages/wp-json/>; rel="https://api.w.org/",
       <https://www.haiti-reference.com/pages/?p=1898>; rel=shortlink
     Content-Length:
-    - '28034'
+    - '28023'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Tue, 23 Jan 2018 02:40:54 GMT
+recorded_at: Tue, 23 Jan 2018 23:02:01 GMT
