@@ -35,7 +35,7 @@ def scrape_list(url)
                   %i[departement district circ_id].map { |i| area[i].downcase.tr(' ', '_') }
 
       data = {
-        name:    tds[0].text.tidy.sub('Siège vacant dû au décès de ', ''),
+        name:    tds[0].text.tidy.sub('Siège vacant dû au décès de ', '').sub(/ \(.*?\)/, ''),
         region:  dep.text.tidy,
         area_id: area[:id],
         area:    area[:circ],
