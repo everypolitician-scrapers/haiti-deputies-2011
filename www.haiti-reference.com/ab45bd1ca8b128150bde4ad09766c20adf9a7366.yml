@@ -20,7 +20,7 @@ response:
     Server:
     - nginx/1.12.2
     Date:
-    - Sat, 26 May 2018 00:01:24 GMT
+    - Sun, 27 May 2018 08:47:11 GMT
     Content-Type:
     - text/html; charset=UTF-8
     Connection:
@@ -31,8 +31,8 @@ response:
     Set-Cookie:
     - wordpress_test_cookie=WP+Cookie+check; path=/pages/; secure
     Content-Length:
-    - '24390'
+    - '24343'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Sat, 26 May 2018 00:01:24 GMT
+recorded_at: Sun, 27 May 2018 08:47:11 GMT
