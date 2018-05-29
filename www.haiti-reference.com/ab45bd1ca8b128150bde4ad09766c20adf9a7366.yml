@@ -20,7 +20,7 @@ response:
     Server:
     - nginx/1.12.2
     Date:
-    - Mon, 28 May 2018 13:26:44 GMT
+    - Tue, 29 May 2018 00:33:03 GMT
     Content-Type:
     - text/html; charset=UTF-8
     Connection:
@@ -28,11 +28,9 @@ response:
     Link:
     - <https://www.haiti-reference.com/pages/wp-json/>; rel="https://api.w.org/",
       <https://www.haiti-reference.com/pages/?p=1898>; rel=shortlink
-    Set-Cookie:
-    - wordpress_test_cookie=WP+Cookie+check; path=/pages/; secure
     Content-Length:
-    - '24332'
+    - '24345'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Mon, 28 May 2018 13:26:44 GMT
+recorded_at: Tue, 29 May 2018 00:33:03 GMT
