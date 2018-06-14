@@ -117,7 +117,6 @@ img.emoji {
 <link rel='stylesheet' id='feedzy-rss-feeds-css'  href='https://www.haiti-reference.com/pages/wp-content/plugins/feedzy-rss-feeds/css/feedzy-rss-feeds.css?ver=3.2.10' type='text/css' media='all' />
 <link rel='stylesheet' id='wpcloudy-css'  href='https://www.haiti-reference.com/pages/wp-content/plugins/wp-cloudy/css/wpcloudy.min.css?ver=4.9.6' type='text/css' media='all' />
 <link rel='stylesheet' id='wppa_style-css'  href='https://www.haiti-reference.com/pages/wp-content/plugins/wp-photo-album-plus/theme/wppa-style.css?ver=6-9-02-004' type='text/css' media='all' />
-<link rel='stylesheet' id='front-css-yuzo_related_post-css'  href='https://www.haiti-reference.com/pages/wp-content/plugins/yuzo-related-post/assets/css/style.css?ver=5.12.74' type='text/css' media='all' />
 <link rel='stylesheet' id='wp_fanzone_slider-css'  href='https://www.haiti-reference.com/pages/wp-content/themes/wp-fanzone/css/slider.css?ver=4.9.6' type='text/css' media='screen' />
 <link rel='stylesheet' id='wp_fanzone_responsive-css'  href='https://www.haiti-reference.com/pages/wp-content/themes/wp-fanzone/css/responsive.css?ver=4.9.6' type='text/css' media='screen' />
 <link rel='stylesheet' id='wp_fanzone_font_awesome-css'  href='https://www.haiti-reference.com/pages/wp-content/themes/wp-fanzone/assets/css/font-awesome.min.css?ver=4.9.6' type='text/css' media='all' />
@@ -126,7 +125,6 @@ img.emoji {
 <link rel='stylesheet' id='wp_fanzone-ie-css'  href='https://www.haiti-reference.com/pages/wp-content/themes/wp-fanzone/css/ie.css?ver=4.9.6' type='text/css' media='all' />
 <![endif]-->
 <link rel='stylesheet' id='wp-fanzone-style-css'  href='https://www.haiti-reference.com/pages/wp-content/themes/wp-fanzone/style.css?ver=4.9.6' type='text/css' media='all' />
-<link rel='stylesheet' id='wpbdp-widgets-css'  href='https://www.haiti-reference.com/pages/wp-content/plugins/business-directory-plugin/assets/css/widgets.min.css?ver=5.2' type='text/css' media='all' />
 <link rel='stylesheet' id='evcal_google_fonts-css'  href='//fonts.googleapis.com/css?family=Oswald%3A400%2C300%7COpen+Sans%3A700%2C400%2C400i%7CRoboto%3A700%2C400&#038;ver=4.9.6' type='text/css' media='screen' />
 <link rel='stylesheet' id='evcal_cal_default-css'  href='//www.haiti-reference.com/pages/wp-content/plugins/eventON/assets/css/eventon_styles.css?ver=2.6.10' type='text/css' media='all' />
 <link rel='stylesheet' id='evo_font_icons-css'  href='//www.haiti-reference.com/pages/wp-content/plugins/eventON/assets/fonts/font-awesome.css?ver=2.6.10' type='text/css' media='all' />
@@ -175,102 +173,6 @@ var slider_speed = {"vars":"6000"};
 <link rel='shortlink' href='https://www.haiti-reference.com/pages/?p=1898' />
 <link rel="alternate" type="application/json+oembed" href="https://www.haiti-reference.com/pages/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.haiti-reference.com%2Fpages%2Fplan%2Fpolitique%2Fpouvoir-legislatif%2F49eme-legislature%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://www.haiti-reference.com/pages/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.haiti-reference.com%2Fpages%2Fplan%2Fpolitique%2Fpouvoir-legislatif%2F49eme-legislature%2F&#038;format=xml" />
-<script id="wpcp_disable_selection" type="text/javascript">
-//<![CDATA[
-var image_save_msg='You Can Not Save images!';
-	var no_menu_msg='Context Menu disabled!';
-	var smessage = "Tu ne peux copier le contenu de ce site.";
-
-function disableEnterKey(e)
-{
-	if (e.ctrlKey){
-     var key;
-     if(window.event)
-          key = window.event.keyCode;     //IE
-     else
-          key = e.which;     //firefox (97)
-    //if (key != 17) alert(key);
-     if (key == 97 || key == 65 || key == 67 || key == 99 || key == 88 || key == 120 || key == 26 || key == 85  || key == 86 || key == 83 || key == 43)
-     {
-          show_wpcp_message('You are not allowed to copy content or view source');
-          return false;
-     }else
-     	return true;
-     }
-}
-
-function disable_copy(e)
-{	
-	var elemtype = e.target.nodeName;
-	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-	elemtype = elemtype.toUpperCase();
-	var checker_IMG = '';
-	if (elemtype == "IMG" && checker_IMG == 'checked' && e.detail >= 2) {show_wpcp_message(alertMsg_IMG);return false;}
-	if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
-	{
-		if (smessage !== "" && e.detail == 2)
-			show_wpcp_message(smessage);
-		
-		if (isSafari)
-			return true;
-		else
-			return false;
-	}	
-}
-function disable_copy_ie()
-{
-	var elemtype = window.event.srcElement.nodeName;
-	elemtype = elemtype.toUpperCase();
-	if (elemtype == "IMG") {show_wpcp_message(alertMsg_IMG);return false;}
-	if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
-	{
-		//alert(navigator.userAgent.indexOf('MSIE'));
-			//if (smessage !== "") show_wpcp_message(smessage);
-		return false;
-	}
-}	
-function reEnable()
-{
-	return true;
-}
-document.onkeydown = disableEnterKey;
-document.onselectstart = disable_copy_ie;
-if(navigator.userAgent.indexOf('MSIE')==-1)
-{
-	document.onmousedown = disable_copy;
-	document.onclick = reEnable;
-}
-function disableSelection(target)
-{
-    //For IE This code will work
-    if (typeof target.onselectstart!="undefined")
-    target.onselectstart = disable_copy_ie;
-    
-    //For Firefox This code will work
-    else if (typeof target.style.MozUserSelect!="undefined")
-    {target.style.MozUserSelect="none";}
-    
-    //All other  (ie: Opera) This code will work
-    else
-    target.onmousedown=function(){return false}
-    target.style.cursor = "default";
-}
-//Calling the JS function directly just after body load
-window.onload = function(){disableSelection(document.body);};
-//]]>
-</script>
-	<script id="wpcp_disable_Right_Click" type="text/javascript">
-	//<![CDATA[
-	document.ondragstart = function() { return false;}
-	/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-	Disable context menu on images by GreenLava Version 1.0
-	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
-	    function nocontext(e) {
-	       return false;
-	    }
-	    document.oncontextmenu = nocontext;
-	//]]>
-	</script>
 
 <script type="text/javascript" >
 wppaImageDirectory = "https://www.haiti-reference.com/pages/wp-content/plugins/wp-photo-album-plus/img/";
@@ -677,9 +579,35 @@ font-size: 12px;}
 	 
 <script src="/wimpy/wimpy.js"></script>
 <script src="/include/scroll.js"></script>
+	
+	<script>
+document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            return false;
+        } else {
+            return true;
+        }
+};
+$(document).keypress("u",function(e) {
+  if(e.ctrlKey)
+  {
+return false;
+}
+else
+{
+return true;
+}
+});
+</script>
+
+
 </head>
 
-<body data-rsssl=1 class="page-template-default page page-id-1898 page-child parent-pageid-1862 unselectable">
+<body data-rsssl=1 class="page-template-default page page-id-1898 page-child parent-pageid-1862" oncontextmenu = ' return false ; ' >
 
 
 <div id="page" class="hfeed site">
@@ -1717,7 +1645,7 @@ Port à Piment</td>
 					<a href="https://www.haiti-reference.com/pages/2018/01/29/carnaval-art-bienseance/">Pour un carnaval où l’art côtoie la bienséance</a>
 									</li>
 					</ul>
-		</aside><aside id="wpbdp_randomlistingswidget-2" class="widget widget_wpbdp_randomlistingswidget"><div class="widget-title"><h4>Écoles secondaires privées</h4><div class="arrow-right"></div></div><ul class="wpbdp-listings-widget-list"><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2082/college-la-fraternite">Collège la Fraternité</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2088/college-saint-joseph">Collège Saint Joseph</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2167/college-saint-jean">Collège Saint Jean</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2078/college-frere-enel-clerisme">Collège Frère Enel Clérismé</a></li><li><a class="listing-title" href="https://www.haiti-reference.com/pages/plan/education/ecoles_sec/2055/college-methodiste-libre-des-gonaives">Collège Méthodiste Libre des Gonaïves</a></li></ul></aside><aside id="text-22" class="widget widget_text"><div class="widget-title"><h4>Supportez-nous</h4><div class="arrow-right"></div></div>			<div class="textwidget"><div style="text-align:center;">
+		</aside><aside id="text-22" class="widget widget_text"><div class="widget-title"><h4>Supportez-nous</h4><div class="arrow-right"></div></div>			<div class="textwidget"><div style="text-align:center;">
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="72W9M4D9CT546">
@@ -1766,40 +1694,40 @@ Vous pouvez également nous supporter en nous offrant un exemplaire d'un ouvrage
                         <div id="text-6" class="widget widget_text"><div class="widget-title"><h3>Pages revisitées</h3></div>
 			<div class="textwidget">
 <small>
+
+&bull; 13/06/2018: <a href="/pages/plan/arts-et-culture/arts/sigles/">Sigles et acronymes utilis&eacute;s en Haiti</a><br>
+
+&bull; 12/06/2018: <a href="/pages/plan/sports-et-loisirs/sports/foot-ball/champions/">Football  1è div.: Équipes championnes</a><br>
 &bull; 10/06/2018: <a href="/pages/plan/economie-et-finances/associations-patronales/">Associations patronales et chambres de commerce</a><br>
+
 &bull; 07/06/2018: <a href="/pages/plan/histoire-et-societe/ephemerides/">Histoire: Rep&egrave;res chronologiques</a><br>
-&bull; 02/06/2018: <a href="/pages/plan/arts-et-culture/litterature/bibliotheques-et-archives/marche-du-livre-haitien/livres-sur-haiti-2015/">Livres sur Haiti: 2015</a><br>
-&bull; 01/06/2018: <a href="/pages/plan/sante-et-bien-etre-social/assurances/">Compagnies d'assurance</a><br>
-&bull; 30/05/2018: <a href="/pages/plan/arts-et-culture/arts/artistes/">Artistes Haitiens: Un index</a>
+
+&bull; 02/06/2018: <a href="/pages/plan/arts-et-culture/litterature/bibliotheques-et-archives/marche-du-livre-haitien/livres-sur-haiti-2015/">Livres sur Haiti: 2015</a>
+
 </small>
-
-
-
-
 
 
 
 <!-- Start of StatCounter Code for Default Guide -->
 
 
-
 <script type="text/javascript">
-
 
 
 var sc_project=10196912; 
 
 
-
 var sc_invisible=1; 
-
 
 
 var sc_security="aca95674"; 
 
 
-
 var scJsHost = (("https:" == document.location.protocol) ?
+
+
+
+
 
 
 
@@ -1807,7 +1735,15 @@ var scJsHost = (("https:" == document.location.protocol) ?
 
 
 
+
+
+
+
 document.write("<sc"+"ript type='text/javascript' src='" +
+
+
+
+
 
 
 
@@ -1815,7 +1751,15 @@ scJsHost+
 
 
 
+
+
+
+
 "statcounter.com/counter/counter.js'></"+"script>");
+
+
+
+
 
 
 
@@ -1823,7 +1767,15 @@ scJsHost+
 
 
 
+
+
+
+
 <noscript><div class="statcounter"><a title="web analytics"
+
+
+
+
 
 
 
@@ -1831,7 +1783,15 @@ href="http://statcounter.com/" target="_blank"><img
 
 
 
+
+
+
+
 class="statcounter"
+
+
+
+
 
 
 
@@ -1839,7 +1799,15 @@ src="//c.statcounter.com/10196912/0/aca95674/1/" alt="web
 
 
 
+
+
+
+
 analytics"></a></div></noscript>
+
+
+
+
 
 
 
@@ -1851,11 +1819,31 @@ analytics"></a></div></noscript>
 
 
 
+
+
+
+
+
+
+
+
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 
 
 
+
+
+
+
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5207d6064f79d01e"></script>
+
+
+
+
+
+
+
+
 
 
 
@@ -1895,78 +1883,7 @@ Boston, MA 02136-5663 (U.S.A.)<br>
 		var gmapstyles = 'default';
 		/* ]]> */
 		</script>		
-			<div id="wpcp-error-message" class="msgmsg-box-wpcp warning-wpcp hideme"><span>error: </span>Tu ne peux copier le contenu de ce site.</div>
-	<script>
-	var timeout_result;
-	function show_wpcp_message(smessage)
-	{
-		if (smessage !== "")
-			{
-			var smessage_text = '<span>Alert: </span>'+smessage;
-			document.getElementById("wpcp-error-message").innerHTML = smessage_text;
-			document.getElementById("wpcp-error-message").className = "msgmsg-box-wpcp warning-wpcp showme";
-			clearTimeout(timeout_result);
-			timeout_result = setTimeout(hide_message, 3000);
-			}
-	}
-	function hide_message()
-	{
-		document.getElementById("wpcp-error-message").className = "msgmsg-box-wpcp warning-wpcp hideme";
-	}
-	</script>
-	<style type="text/css">
-	#wpcp-error-message {
-	    direction: ltr;
-	    text-align: center;
-	    transition: opacity 900ms ease 0s;
-	    z-index: 99999999;
-	}
-	.hideme {
-    	opacity:0;
-    	visibility: hidden;
-	}
-	.showme {
-    	opacity:1;
-    	visibility: visible;
-	}
-	.msgmsg-box-wpcp {
-		border-radius: 10px;
-		color: #555;
-		font-family: Tahoma;
-		font-size: 11px;
-		margin: 10px;
-		padding: 10px 36px;
-		position: fixed;
-		width: 255px;
-		top: 50%;
-  		left: 50%;
-  		margin-top: -10px;
-  		margin-left: -130px;
-  		-webkit-box-shadow: 0px 0px 34px 2px rgba(242,191,191,1);
-		-moz-box-shadow: 0px 0px 34px 2px rgba(242,191,191,1);
-		box-shadow: 0px 0px 34px 2px rgba(242,191,191,1);
-	}
-	.msgmsg-box-wpcp span {
-		font-weight:bold;
-		text-transform:uppercase;
-	}
-	.error-wpcp {		background:#ffecec url('https://www.haiti-reference.com/pages/wp-content/plugins/wp-content-copy-protector/images/error.png') no-repeat 10px 50%;
-		border:1px solid #f5aca6;
-	}
-	.success {
-		background:#e9ffd9 url('https://www.haiti-reference.com/pages/wp-content/plugins/wp-content-copy-protector/images/success.png') no-repeat 10px 50%;
-		border:1px solid #a6ca8a;
-	}
-	.warning-wpcp {
-		background:#ffecec url('https://www.haiti-reference.com/pages/wp-content/plugins/wp-content-copy-protector/images/warning.png') no-repeat 10px 50%;
-		border:1px solid #f5aca6;
-	}
-	.notice {
-		background:#e3f7fc url('https://www.haiti-reference.com/pages/wp-content/plugins/wp-content-copy-protector/images/notice.png') no-repeat 10px 50%;
-		border:1px solid #8ed9f6;
-	}
-    </style>
-
+		
 		<!-- start WPPA+ Footer data -->
 		<div id="wppa-overlay-bg" style="text-align:center;display:none;position:fixed;top:0;left:0;z-index:100090;width:100%;height:2048px;background-color:black;" onclick="wppaOvlOnclick(event)" ><div id="wppa-ovl-legenda-1" onmouseover="jQuery(this).css('visibility','visible');" onmouseout="jQuery(this).css('visibility','hidden');" style="position:absolute;left:0;top:0;background-color:black;color:#a7a7a7;visibility:visible;" >
 					Appuyez sur f pour le plein écran.
@@ -2007,14 +1924,9 @@ Boston, MA 02136-5663 (U.S.A.)<br>
 	/* START Viewcounts */
 	/* END Vieuwcounts */
 </script>
-<!-- Nonce for various wppa actions --><input type="hidden" id="wppa-nonce" name="wppa-nonce" value="12cb1527ce" /><input type="hidden" id="wppa-qr-nonce" name="wppa-qr-nonce" value="37279d733f" />
+<!-- Nonce for various wppa actions --><input type="hidden" id="wppa-nonce" name="wppa-nonce" value="5f3bc35685" /><input type="hidden" id="wppa-qr-nonce" name="wppa-qr-nonce" value="34be619efc" />
 <!-- Do user upload -->
-<!-- Done user upload --><style scoped>.yuzo_related_post{}
-.yuzo_related_post .relatedthumb{}
-
-@media print {
-  .yuzo_related_post { display:none; } 
-}</style><div class='evo_lightboxes' style='display:block'>					<div class='evo_lightbox eventcard eventon_events_list' id='' >
+<!-- Done user upload --><div class='evo_lightboxes' style='display:block'>					<div class='evo_lightbox eventcard eventon_events_list' id='' >
 						<div class="evo_content_in">													
 							<div class="evo_content_inin">
 								<div class="evo_lightbox_content">
@@ -2026,7 +1938,7 @@ Boston, MA 02136-5663 (U.S.A.)<br>
 					</div>
 					</div><script type='text/javascript'>
 /* <![CDATA[ */
-var wpcAjax = {"wpc_nonce":"c863902ada","wpc_url":"https:\/\/www.haiti-reference.com\/pages\/wp-admin\/admin-ajax.php?lang=fr"};
+var wpcAjax = {"wpc_nonce":"f5f48df544","wpc_url":"https:\/\/www.haiti-reference.com\/pages\/wp-admin\/admin-ajax.php?lang=fr"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://www.haiti-reference.com/pages/wp-content/plugins/wp-cloudy/js/wp-cloudy-ajax.js?ver=4.9.6'></script>
@@ -2038,12 +1950,12 @@ var wpcAjax = {"wpc_nonce":"c863902ada","wpc_url":"https:\/\/www.haiti-reference
 <script type='text/javascript' src='//www.haiti-reference.com/pages/wp-content/plugins/eventON/assets/js/jquery.mousewheel.min.js?ver=2.6.10'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var the_ajax_script = {"ajaxurl":"https:\/\/www.haiti-reference.com\/pages\/wp-admin\/admin-ajax.php","postnonce":"62b165ba56"};
+var the_ajax_script = {"ajaxurl":"https:\/\/www.haiti-reference.com\/pages\/wp-admin\/admin-ajax.php","postnonce":"716734199f"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='//www.haiti-reference.com/pages/wp-content/plugins/eventON/assets/js/eventon_script.js?ver=2.6.10'></script>
 <script type='text/javascript' src='https://www.haiti-reference.com/pages/wp-includes/js/wp-embed.min.js?ver=4.9.6'></script>
-<style type="text/css"></style>
+
     <script type="text/javascript">
         jQuery("li.menu-item-250").addClass('current-menu-item');
     </script>
