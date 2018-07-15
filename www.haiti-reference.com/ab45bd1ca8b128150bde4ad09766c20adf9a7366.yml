@@ -20,7 +20,7 @@ response:
     Server:
     - nginx/1.12.2
     Date:
-    - Sat, 14 Jul 2018 10:35:50 GMT
+    - Sun, 15 Jul 2018 11:50:09 GMT
     Content-Type:
     - text/html; charset=UTF-8
     Connection:
@@ -29,12 +29,12 @@ response:
     - <https://www.haiti-reference.com/pages/wp-json/>; rel="https://api.w.org/",
       <https://www.haiti-reference.com/pages/?p=1898>; rel=shortlink
     Cache-Control:
-    - max-age=604800
+    - max-age=0
     Expires:
-    - Sat, 21 Jul 2018 10:35:49 GMT
+    - Sun, 15 Jul 2018 11:50:08 GMT
     Content-Length:
-    - '25608'
+    - '25688'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Sat, 14 Jul 2018 10:35:51 GMT
+recorded_at: Sun, 15 Jul 2018 11:50:09 GMT
