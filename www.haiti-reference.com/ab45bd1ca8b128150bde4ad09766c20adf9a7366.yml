@@ -20,7 +20,7 @@ response:
     Server:
     - nginx/1.12.2
     Date:
-    - Fri, 07 Sep 2018 06:18:54 GMT
+    - Sat, 08 Sep 2018 12:00:06 GMT
     Content-Type:
     - text/html; charset=UTF-8
     Connection:
@@ -31,10 +31,10 @@ response:
     Cache-Control:
     - max-age=0
     Expires:
-    - Fri, 07 Sep 2018 06:18:53 GMT
+    - Sat, 08 Sep 2018 12:00:03 GMT
     Content-Length:
-    - '25899'
+    - '25885'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Fri, 07 Sep 2018 06:18:54 GMT
+recorded_at: Sat, 08 Sep 2018 12:00:07 GMT
