@@ -18,9 +18,9 @@ response:
     message: OK
   headers:
     Server:
-    - nginx/1.12.2
+    - nginx/1.14.0
     Date:
-    - Mon, 29 Oct 2018 01:31:06 GMT
+    - Tue, 30 Oct 2018 08:46:20 GMT
     Content-Type:
     - text/html; charset=UTF-8
     Connection:
@@ -31,10 +31,10 @@ response:
     Cache-Control:
     - max-age=0
     Expires:
-    - Mon, 29 Oct 2018 01:31:04 GMT
+    - Tue, 30 Oct 2018 08:46:19 GMT
     Content-Length:
-    - '30876'
+    - '31919'
   body:
     encoding: ASCII-8BIT
   http_version: 
-recorded_at: Mon, 29 Oct 2018 01:31:07 GMT
+recorded_at: Tue, 30 Oct 2018 08:46:20 GMT
